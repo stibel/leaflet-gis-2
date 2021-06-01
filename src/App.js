@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch
+} from "react-router-dom";
+import Header from "./components/Header";
+import { StyleContextProvider } from "./contexts/StyleContext";
+import HomeScreen from "./screens/HomeScreen";
+import MapScreen from "./screens/MapScreen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyleContextProvider>
+      <Router>
+        <Header destFirst={"Strona główna"} destSecond={"Mapa"} />
+        <Switch>
+          <Route exact path={'/'}>
+            <HomeScreen />
+          </Route>
+          <Route path={"/map"}>
+            <MapScreen />
+          </Route>
+          <Route path={'*'}>
+            <Redirect exact to={'/'} />
+          </Route>
+        </Switch>
+      </Router>
+    </StyleContextProvider>
   );
 }
 
