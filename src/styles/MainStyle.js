@@ -13,7 +13,9 @@ const MainStyle = {
     colours: {
         saffron: '#E8BF28',
         black: '#000000',
-        pink: '#ff33cc'
+        pink: '#ff33cc',
+        green: '#87FF00',
+
     },
     layout: {
         padding: 0,
