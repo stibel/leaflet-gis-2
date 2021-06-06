@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useStyle } from "../contexts/StyleContext";
 import { ROUTES } from "../globals/ROUTES";
-import { gsap } from "gsap";
 import Clock from "./Clock";
 
 const Item = props => {
