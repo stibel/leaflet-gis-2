@@ -19,7 +19,7 @@ const Item = props => {
     const onLeave = () => {
         gsap.to(itemRef.current, {
             duration: .5,
-            textShadow: `3px 3px ${curStyle.colours.saffron}`
+            textShadow: 'none' 
         })
     }
 
@@ -76,9 +76,11 @@ const Header = props => {
             <div style={{
                 ...curStyle.layout,
                 width: '15vw',
-                justifyContent: 'right'
+                justifyContent: 'center'
             }}>
-                <Clock style={{ opacity: '0' }} />
+                <Clock 
+                style={{ margin: '1% 0' }}
+                 />
             </div>
         </div>
     )
