@@ -16,8 +16,8 @@ const LayerControl = (props) => {
                 zIndex: 5
             }}
         >
-            <LayerControlButton label={'dupka'} />
-            <LayerControlButton>pieska</LayerControlButton>
+            <LayerControlButton />
+            <LayerControlButton />
         </div>
     )
 }
